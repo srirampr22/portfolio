@@ -6,10 +6,31 @@ body{
     font-family: 'Nunito-Bold';
     src:url(../fonts/Nunito-Bold.ttf) format('truetype');
 }
+/* @font-face {
+    font-family: 'Kalina';
+    src:url(fonts/Kalnia/static/Kalnia_Expanded-Regular.ttf) format('truetype');
+} */
+
 @font-face {
-    font-family: 'OpenSans-Regular';
-    src:url(../fonts/OpenSans-Regular.ttf) format('truetype');
+  font-family: 'DM-Serif';
+  src: url(../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'DM-Serif';
+  src: url(../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(../fonts/Raleway/static/Raleway-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway-italic';
+  src: url(../fonts/Raleway/static/Raleway-Italic.ttf) format('truetype');
+}
+
 .mainHeader{
 	  position: fixed; 
     top: -60px; 
@@ -45,7 +66,7 @@ body{
 
 /* HTML element that will have the glowing effect */
 .header-section {
-  background: #deecdf;
+  background: #040c04;
   background-image: url('../img/1.jpg');
   text-align: center;
   min-height: 500px;
@@ -55,43 +76,52 @@ body{
   margin-top: 7em;
 }
 .header-section h2 {
-  font-family: 'Nunito-Bold';
-  font-size: 4em;
+  font-family: 'DM-Serif';
+  font-size: 3em;
   text-transform: capitalize;
-  color: #393b3a;
+  color: #f3f7f5;
   padding: 0.5em 0 0 0;
 }
 .header-section span {
-  color: #00cfbd;
+  color: #f6f8f8;
   font-size: 1em;
 }
 .header-section p {
-  font-family: 'Nunito-Bold';
-  font-size: 1.3em;
-  color: #393b3a;
+  font-family: 'Raleway';
+  font-size: 2em;
+  color: #eceeed;
 }
 span.glyphicon.glyphicon-triangle-bottom {
   font-size: 2em;
   color: #fff;
-  background-color: rgb(0, 207, 189);
+  background-color: rgb(233, 94, 52);
   padding: 0.5em 2em;
   border-radius: 5px 5px 0 0;
   margin-top: 2.5em;
 }
 .about{
 	background-size: cover;
-	background: #deecdf;
+	background: #040c04;
 /* 	background-image: url('../img/1.jpg');
  */	padding-bottom: 5vw;
 	text-align: center;
 }
 .about h3{
-	font-family: 'Nunito-Bold';
+	font-family: 'DM-Serif';
   	font-size: 2.5em;
   	text-transform: capitalize;
-  	color: #393b3a;
+  	color: #ffffff;
   	padding-bottom: 2%;
 }
+
+.about-text {
+  font-family: 'Raleway';
+  	font-size: 1em;
+  	text-transform: capitalize;
+  	color: #ffffff;
+  	padding-bottom: 2%;
+}
+
 .yourPic{
 	    padding-left: 0%;
 	    transition:  all 0.5s;
@@ -124,31 +154,345 @@ span.glyphicon.glyphicon-triangle-bottom {
 @media only screen and (max-width:1281px) { /* hi-res laptops and desktops */ 
 }
 
-.skills{
+/* ----------------------------------education section------------------------------------- */
+
+.education{
+  background-size: cover;
+	background: #eff3ef;
+  padding-bottom: 5vw;
+	text-align: center;
 }
-.experience{
-	background-color: rgba(255,244,1,0.4);	height: 100vh;
+
+.education-heading {
+  font-family: 'DM-Serif';
+  font-size: 2.5em;
+  text-transform: capitalize;
+  color: #0c0b0b;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+.education-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.1em; /* Space between entries */
+}
+
+.degree-title {
+  font-family: 'Raleway';
+  font-size: 1.2em;
+  text-transform: capitalize;
+  text-align: left;
+  color: #0c0b0b;
+  flex: 1; /* Allows the title to take up the space needed */
+  margin-right: 0.5em; /* Ensures some space between title and university name */
+}
+
+.university-name {
+  font-family: 'Raleway';
+  font-size: 0.9em;
+  text-transform: capitalize;
+  color: #0c0b0b;
+  text-align: left;
+  flex: 1; /* Allows the name to take up the space needed */
+  margin-right: 0.5em;
+}
+
+label {
+  font-family: 'Raleway';
+  font-size: 1em;
+  color: #0c0b0b;
+  white-space: nowrap; /* Keeps label text on the same line */
+}
+
+
+
+/* ----------------------------------education section------------------------------------- */
+
+
+
+/* .skills{
+  background-size: cover;
+	background: #eff3ef;
+  padding-bottom: 5vw;
+	text-align: center;	
+} */
+
+.skills {
+  background-size: cover;
+  background: #eff3ef;
+  padding-bottom: 5vw;
+  text-align: center;
+}
+
+.skills-heading {
+  font-family: 'DM-Serif';
+  font-size: 2.5em;
+  text-transform: capitalize;
+  color: #0c0b0b;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+.skills-name {
+  font-family: 'Raleway';
+  font-size: 1.3em;
+  text-transform: capitalize;
+  color: #0c0b0b;
+  text-align: left;
+  /* flex: 1; Allows the name to take up the space needed */
+  margin-right: 1.0em;
+}
+
+.skill-icon {
+  margin-right: 8px; /* Adjust the space as needed */
+  color: #12aa33;
+}
+
+
+.skill-set {
+  text-align: left; /* Align skill text to the left */
+}
+
+.skill-set h4 {
+  margin-bottom: 0.5em; /* Space between skill text and progress bar */
+}
+
+.progress {
+  height: 20px; /* Set a fixed height for your progress bars */
+  background-color: #ffffff;
+  border-radius: 5px; /* Optional: adds rounded corners to the progress bars */
+  overflow: hidden; /* Ensures the inner bar does not overflow */
+  width: 100%; /* Ensures the progress bar container takes the full width */
+}
+
+.progress-bar {
+  height: 100%; /* Ensures the progress bar fills the container vertically */
+  border-radius: 5px; /* Match the border-radius of the progress container */
+  background-color: #ece8e8;
+}
+
+/* Example color for a progress bar, repeat for each type/skill */
+.progress-bar-success {
+  background-color: #2a8d41; /* Bootstrap 4 success color */
+}
+
+/* Ensure the .col-md-12 has no padding that could affect the full width */
+.col-md-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* -------------------------------------publications section ----------------------------------------------*/
+
+
+.publication{
+  background-size: cover;
+	background: #eff3ef;
+  padding-bottom: 5vw;
+	text-align: center;
+}
+
+.publication-heading {
+  font-family: 'DM-Serif';
+  font-size: 2.5em;
+  text-transform: capitalize;
+  color: #0c0b0b;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+.publication-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.1em; /* Space between entries */
+}
+
+.pub-title {
+  font-family: 'Raleway';
+  font-size: 1.2em;
+  text-transform: capitalize;
+  text-align: left;
+  color: #0c0b0b;
+  flex: 1; /* Allows the title to take up the space needed */
+  margin-right: 0.5em; /* Ensures some space between title and university name */
+}
+
+.pub-name {
+  font-family: 'Raleway';
+  font-size: 0.9em;
+  text-transform: capitalize;
+  color: #0c0b0b;
+  text-align: left;
+  flex: 1; /* Allows the name to take up the space needed */
+  margin-right: 0.5em;
+}
+
+label {
+  font-family: 'Raleway';
+  font-size: 1em;
+  color: #0c0b0b;
+  white-space: nowrap; /* Keeps label text on the same line */
+}
+
+
+
+
+/* ----------------------------------expirence page------------------------------------------------------- */
+
+
+.exp{
+	background-color: rgb(0, 0, 0);	height: 100vh;
 	text-align: center;	
 }
-.experience h3{
-	font-family: 'Nunito-Bold';
-  	font-size: 2.5em;
-  	text-transform: capitalize;
-  	color: #393b3a;
+
+body .exps .main-heading {
+  margin-bottom: 1000px;
+  font-family: 'DM-Serif';
+  font-size: 2.5em;
+  text-transform: capitalize;
+  color: #ffffff;
+  padding-bottom: 180px; /* Adjust this value as needed */
+  text-align: center;
 }
+
+
+.exp-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Space between exp items */
+}
+
+.exp-image img {
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  margin-right: 200px; /* Space between image and text */
+}
+
+.exp-info {
+  position: relative;
+}
+
+.exp-title {
+  font-family: 'DM-Serif';
+  font-size: 1.5em;
+  color: #ffffff;
+  cursor: pointer; /* Indicates the title is interactive */
+  text-align: left;
+}
+
+.exp-description {
+  font-family: 'Raleyway';
+  background: #000000;
+  overflow: hidden;
+  color: #ffffff;
+  line-height: 20px;
+  transition: max-height .5s ease-in-out;
+  max-height: 0; 
+  text-align: left;  
+}
+
+.exp-title:hover + .exp-description {
+  max-height: 500px; /* Large enough to accommodate content */
+  padding: 0 10px;
+}
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) {
+  .exp-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .exp-image img {
+      margin-bottom: 10px;
+  }
+
+  .exp-description {
+      position: static;
+  }
+}
+/* ----------------------------------expirence page------------------------------------------------------- */
+
+
+/* ----------------------------------project page------------------------------------------------------- */
+
 .projects{
-	background-color: rgba(25,244,1,0.4);
+	background-color: rgb(7, 10, 7);
 	padding: 5%;
 	text-align: center;	
 
 }
-.projects h3{
-	font-family: 'Nunito-Bold';
-  	font-size: 2.5em;
-  	text-transform: capitalize;
-  	color: #393b3a;
-  	margin-bottom: 2%;
+
+body .projects .main-heading {
+  margin-bottom: 1000px;
+  font-family: 'DM-Serif';
+  font-size: 2.5em;
+  text-transform: capitalize;
+  color: #ffffff;
+  padding-bottom: 180px; /* Adjust this value as needed */
+  text-align: center;
 }
+
+
+.project-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Space between project items */
+}
+
+.project-image img {
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  margin-right: 200px; /* Space between image and text */
+}
+
+.project-info {
+  position: relative;
+}
+
+.project-title {
+  font-family: 'DM-Serif';
+  font-size: 1.5em;
+  color: #ffffff;
+  cursor: pointer; /* Indicates the title is interactive */
+  text-align: left;
+}
+
+.project-description {
+  font-family: 'Raleyway';
+  background: #000000;
+  overflow: hidden;
+  color: #ffffff;
+  line-height: 20px;
+  transition: max-height .5s ease-in-out;
+  max-height: 0; 
+  text-align: left;  
+}
+
+.project-title:hover + .project-description {
+  max-height: 500px; /* Large enough to accommodate content */
+  padding: 0 10px;
+}
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) {
+  .project-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .project-image img {
+      margin-bottom: 10px;
+  }
+
+  .project-description {
+      position: static;
+  }
+}
+/* ----------------------------------project page------------------------------------------------------- */
+
 .hero{
   width: 100%;
   height: 40%;
@@ -405,18 +749,68 @@ font-size: 2em;
 }
 .contact-section {
   padding: 4em 0;
-  background: #deecdf;
+  background: #000000;
  
  }
 .contact-section h3 {
-    font-family: 'Nunito-Bold';
+  font-family: 'DM-Serif';
   font-size: 2.5em;
   text-transform: capitalize;
-  color: #393b3a;
+  color: #e2d3d3;
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 
 }
+
+.social-icons {
+  /* Additional styling if needed */
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 80px;
+  color: #ffffff; /* Change as needed */
+  font-size: 50px;
+  text-decoration: none;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.social-icon:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(17px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 100%; /* Make it round for icons */
+}
+
+.social-icon:hover:before {
+  opacity: 1;
+}
+
+.social-icon:hover {
+  color: #fff; /* Maintain the same color on hover */
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
 .contact-details form input[type="text"],.contact-details form textarea {
 	width: 100%;
 	padding: 1.5em 1em;
