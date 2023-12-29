@@ -31,6 +31,11 @@ body{
   src: url(../fonts/Raleway/static/Raleway-Italic.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url(../fonts/Raleway/static/Raleway-BoldItalic.ttf) format('truetype');
+}
+
 .mainHeader{
 	  position: fixed; 
     top: -60px; 
@@ -170,41 +175,164 @@ span.glyphicon.glyphicon-triangle-bottom {
   color: #0c0b0b;
   padding-bottom: 2%;
   text-align: center;
+  margin-bottom: 50px;
 }
+
 
 .education-entry {
   display: flex;
-  justify-content: space-between;
+  justify-content: Cormorantspace-between;
   align-items: center;
   margin-bottom: 0.1em; /* Space between entries */
 }
 
+.education-card_1 {
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+  background: transparent;
+  min-height: 306px;
+  /* ... other styles ... */
+}
+
+.education-card_1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../img/srm.png');
+  background-size: 500px;
+  background-position: center;
+  filter: blur(3px);
+  z-index: 1; /* Place the pseudo-element just below the content */
+}
+
+/* Overlay to darken the background */
+.education-card_1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 25, 25, 0.5); /* Semi-transparent black */
+  z-index: 2; /* Above the image, below the content */
+}
+
+/* Ensure content is above the overlay */
+.education-card_1 * {
+  position: relative;
+  z-index: 3;
+}
+
+.education-card_2 {
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+  background: transparent;
+  margin-bottom: 30px;
+  min-height: 300px;
+  /* ... other styles ... */
+}
+
+.education-card_2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../img/mrob.jpg');
+  background-size: 440px;
+  background-position: center;
+  filter: blur(3px);
+  z-index: 1; /* Place the pseudo-element just below the content */
+}
+
+/* Overlay to darken the background */
+.education-card_2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 25, 25, 0.5); /* Semi-transparent black */
+  z-index: 2; /* Above the image, below the content */
+}
+
+/* Ensure content is above the overlay */
+.education-card_2 * {
+  position: relative;
+  z-index: 3;
+}
+
+
 .degree-title {
-  font-family: 'Raleway';
-  font-size: 1.2em;
-  text-transform: capitalize;
+  font-family: 'Raleyway-Bold';
+  font-size: 2em; /* Adjust size as needed */
+  font-weight: bold;
+  margin-bottom: 10px; /* Space below title */
   text-align: left;
-  color: #0c0b0b;
-  flex: 1; /* Allows the title to take up the space needed */
-  margin-right: 0.5em; /* Ensures some space between title and university name */
+  color: #f6f8f8;
 }
 
 .university-name {
-  font-family: 'Raleway';
-  font-size: 0.9em;
-  text-transform: capitalize;
-  color: #0c0b0b;
+  font-family: 'Raleyway-Bold';
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 10px; /* Space below university name */
   text-align: left;
-  flex: 1; /* Allows the name to take up the space needed */
-  margin-right: 0.5em;
+  color: #f6f8f8;
 }
 
-label {
-  font-family: 'Raleway';
-  font-size: 1em;
-  color: #0c0b0b;
-  white-space: nowrap; /* Keeps label text on the same line */
+.university-name .year {
+  font-weight: normal;
+  color: #ffffff; /* Year color */
+  
 }
+
+.coursework {
+  font-family: 'Raleway';
+  	font-size: 1em;
+  	text-transform: capitalize;
+  	color: #ffffff;
+  	padding-bottom: 2%;
+    text-align: left;
+}
+
+.coursework ul {
+  padding-left: 20px; /* Adjust the indentation of the list */
+  /* Any additional styling for the list */
+}
+
+.coursework li {
+  margin-bottom: 1px; /* Space between each course item */
+  /* Any additional styling for list items */
+}
+
+.gpa {
+  font-family: 'Raleyway-italic';
+  font-style: italic;
+  text-align: right;
+  font-size: 0.6em; /* Smaller than the degree title */
+  color: #ffffff; /* You can change this as needed */
+  margin-left: 30px; /* Space between degree title and GPA */
+}
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) {
+  .education-card {
+      padding: 15px;
+  }
+}
+
 
 
 
@@ -275,7 +403,7 @@ label {
 
 /* Example color for a progress bar, repeat for each type/skill */
 .progress-bar-success {
-  background-color: #2a8d41; /* Bootstrap 4 success color */
+  background-color: #ff8a05; /* Bootstrap 4 success color */
 }
 
 /* Ensure the .col-md-12 has no padding that could affect the full width */
@@ -341,78 +469,171 @@ label {
 
 /* ----------------------------------expirence page------------------------------------------------------- */
 
-
-.exp{
-	background-color: rgb(0, 0, 0);	height: 100vh;
-	text-align: center;	
+.exps {
+  background-color: rgb(7, 10, 7);
+  padding: 5%;
+  text-align: center; 
+  min-height: 100vh;     
 }
-
-body .exps .main-heading {
-  margin-bottom: 1000px;
-  font-family: 'DM-Serif';
-  font-size: 2.5em;
-  text-transform: capitalize;
-  color: #ffffff;
-  padding-bottom: 180px; /* Adjust this value as needed */
-  text-align: center;
-}
-
 
 .exp-item {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px; /* Space between exp items */
+  align-items: flex-start; /* Align items to the start of the flex container */
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.1); /* Transparent background */
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.exp-image {
+  flex: 0 0 auto; /* Do not grow or shrink */
+  margin-right: 20px; /* Space between image and the content */
 }
 
 .exp-image img {
-  width: 200px; /* Adjust as needed */
+  width: 180px; /* Adjust as needed */
   height: auto;
-  margin-right: 200px; /* Space between image and text */
 }
 
-.exp-info {
+.exp-content {
   position: relative;
+  flex: 1; /* Take up remaining space */
 }
 
 .exp-title {
   font-family: 'DM-Serif';
   font-size: 1.5em;
   color: #ffffff;
-  cursor: pointer; /* Indicates the title is interactive */
-  text-align: left;
+  margin-bottom: 10px; /* Space below the title */
 }
 
-.exp-description {
-  font-family: 'Raleyway';
-  background: #000000;
-  overflow: hidden;
+.main-heading {
+  font-family: 'DM-Serif';
+  font-size: 4em;
   color: #ffffff;
-  line-height: 20px;
-  transition: max-height .5s ease-in-out;
-  max-height: 0; 
-  text-align: left;  
+  margin-bottom: 40px; /* Space below the title */
 }
 
-.exp-title:hover + .exp-description {
-  max-height: 500px; /* Large enough to accommodate content */
-  padding: 0 10px;
+
+.exp-hidden-content {
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Increase the duration to 0.5s or more for a smoother effect */
+  font-family: 'Raleway';
+  font-size: 1em;
+  text-transform: capitalize;
+  color: #ffffff;
+  padding-bottom: 2%;
+  text-align: left;
+  max-height: 0; /* Add this to start with hidden content */
+  overflow: hidden; /* Add this to hide the overflow when content is hidden */
 }
 
-/* Responsive adjustments if necessary */
+.exp-item:hover .exp-hidden-content {
+  opacity: 1;
+  max-height: 1000px; /* Increase max-height to accommodate the content size */
+  transition: opacity 0.8s ease, max-height 0.8s ease; /* Add max-height to the transition for a smoother effect */
+}
+
+
+.media-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; /* Space between the description and the media container */
+  flex-wrap: wrap; /* Allows the items to wrap in smaller screens */
+}
+
+.youtube-video-container,
+.gif-container {
+  flex: 0 0 auto; /* Prevents the containers from growing or shrinking */
+  margin-right: 100px; /* Space between the video and the GIF */
+}
+
+.youtube-link {
+  display: block;
+  width: 320px; /* Specify the width of the YouTube thumbnail */
+  height: 180px; /* Specify the height of the YouTube thumbnail */
+  position: relative; /* For the play button positioning */
+  margin-bottom: 20px;
+}
+
+.youtube-thumbnail {
+  width: 100%;
+  height: 100%; /* Make the thumbnail fill the link container */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  border-radius: 5px;
+  
+}
+
+.youtube-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the button */
+  width: 32px; /* Size of the play button */
+  height: 32px; /* Size of the play button */
+  border-radius: 50%;
+  background: url('../img/YouTube_play_button_icon.png') no-repeat center center; /* Play button icon */
+  background-size: cover; /* Cover the area of the button */
+  pointer-events: none; /* Ignore pointer events so the link is clickable */
+}
+
+.gif-container {
+  width: 320px; /* Specify the width of the GIF */
+  height: 180px; /* Specify the height of the GIF */
+}
+
+.project-gif {
+  width: 100%;
+  height: 100%; /* Make the GIF fill its container */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+.skills-list {
+  list-style-type: none; /* Removes default list bullets */
+  padding: 0; /* Resets default padding */
+  margin-top: 10px; /* Spacing after the description */
+  text-align: center; /* Center-align the list items */
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  justify-content: center; /* Center items horizontally */
+  gap: 10px; /* Space between items */
+}
+
+.skills-list li {
+  background: #ffffff; /* Background color for skill tags */
+  color: #000000; /* Text color for skill tags */
+  font-family: 'Raleway';
+  font-size: 1em;
+  text-transform: capitalize;
+  padding-bottom: 2%;
+  padding: 5px 10px; /* Padding inside each tag */
+  border-radius: 5px; /* Rounded corners for tags */
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); /* Optional: adds depth to the tags */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.skills-list li:hover {
+  background: #cccccc; /* Change background color on hover */
+}
+
+
 @media (max-width: 768px) {
-  .exp-item {
-      flex-direction: column;
-      align-items: flex-start;
+  .youtube-video-container,
+  .gif-container {
+      width: 100%; /* Full width on smaller screens */
+      margin-bottom: 20px; /* Space between items when they stack */
+      margin-right: 0;
   }
 
-  .exp-image img {
-      margin-bottom: 10px;
-  }
-
-  .exp-description {
-      position: static;
+  .skills-list {
+    justify-content: start; /* Align items to the start on smaller screens */
   }
 }
+
 /* ----------------------------------expirence page------------------------------------------------------- */
 
 
@@ -426,12 +647,12 @@ body .exps .main-heading {
 }
 
 body .projects .main-heading {
-  margin-bottom: 1000px;
+  margin-bottom: 100px;
   font-family: 'DM-Serif';
-  font-size: 2.5em;
+  font-size: 4em;
   text-transform: capitalize;
   color: #ffffff;
-  padding-bottom: 180px; /* Adjust this value as needed */
+  padding-bottom: 100px; /* Adjust this value as needed */
   text-align: center;
 }
 
@@ -444,6 +665,12 @@ body .projects .main-heading {
 
 .project-image img {
   width: 200px; /* Adjust as needed */
+  height: auto;
+  margin-right: 200px; /* Space between image and text */
+}
+
+.project-image_1 img {
+  width: 350px; /* Adjust as needed */
   height: auto;
   margin-right: 200px; /* Space between image and text */
 }
@@ -471,9 +698,13 @@ body .projects .main-heading {
   text-align: left;  
 }
 
-.project-title:hover + .project-description {
-  max-height: 500px; /* Large enough to accommodate content */
-  padding: 0 10px;
+
+.project-image:hover + .project-info .project-description {
+  max-height: 500px; /* Adjust as needed */
+}
+
+.project-image_1:hover + .project-info .project-description {
+  max-height: 500px; /* Adjust as needed */
 }
 
 /* Responsive adjustments if necessary */
@@ -640,11 +871,11 @@ h1{
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: #774040;
+    background-color: #000000;
     color: white; 
     cursor: pointer; 
-    padding: 15px; 
-    border-radius: 10px;
+    padding: 10px; 
+    border-radius: 50%;
     font-size: 18px;	
     transition: all 2s;
 }
@@ -873,3 +1104,44 @@ font-size: 2em;
     background-color: #000000;
     border: none;
 }
+
+.home-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px; /* Adjust icon size */
+  border-radius: 50%; /* Circular button */
+  width: 50px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  z-index: 1000;
+
+}
+
+.home-button:hover {
+  background-color: #cdeeae;
+
+}
+
+.home-button i {
+  /* Additional styling for the icon if needed */
+  font-size: 20px; /* Adjust icon size */
+  color: #ffffff; /* Adjust icon color */
+}
+
+@media (max-width: 768px) {
+  .home-button {
+      right: 10px; /* Adjust position for smaller screens */
+      width: 40px; /* Smaller size for smaller screens */
+      height: 40px; /* Smaller size for smaller screens */
+  }
+}
+

@@ -66,11 +66,78 @@
                 <!-- Project Item -->
                 <div class="project-item">
                     <div class="project-image">
-                        <img src="projects/p1.png" alt="Project Image">
+                        <img src="projects/donatello.jpeg" alt="Project Image">
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">Pushing Dynamics model for robot planning and control</h3>
-                        <p class="project-description">Implemented a pushing dynamic model to train a robot that was simulated using Pybullet to push an object to a goal pose. This project entailed collecting dynamics data, processing the data, training a model of the dynamics, and using it for planning a sequence of pushes to reach the target location. The pushing block is visualized in white. In green, we visualize the goal pose of the block.
+                        <h3 class="project-title">Warehouse robot</h3>
+                        <p class="project-description">
+                            The warehouse roobt was desgined to autonomously localize, navigate and explore around an unknown space with the goal of pick and placing blocks. 
+                            The project focuses on using various sensors processed through a SLAM implementation (AMCL/Particle-filter for localization and a 2D Occupancy - Grid based mapping framework) to map and navigate new spaces autonomously with the 2 Wheeled differential-drive MBot.
+                            the motion controller was designed using odom-
+                            etry, PID, and IMU sensors; implemented SLAM using the LiDAR in order to map the area and localize the robot;
+                            created an algorithm for frontier to determine where to go
+                            for exploration; and implemented an A* algorithm to plan
+                            the path of the robot. Much of what was was used are basic
+                            functionalities that are utilized at a more complex level in
+                            more complicated robotics. We also designed from scratch a
+                            unique gripper design to manipulate warehouse style cubes.
+                            The camera was used to detect Apriltags to determine the
+                            orientation of the cubes.
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="projects/Armlab.jpeg" alt="Project Image">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Arm Robot</h3>
+                        <p class="project-description">Implementation of a robotic arm capable of completing
+                            manipulation tasks on a set of wooden blocks. Our imple-
+                            mentation is built on top of a learning platform which
+                            consists of the arm itself, a checkered workspace with
+                            accompanying fiducial markers, and an RGBD camera
+                            mounted overhead. A robust method to achieve a rich scene
+                            understanding in a fixed workspace frame is presented,
+                            providing pose information for both the robotic arm as
+                            well as all blocks in view of the RGBD camera. The
+                            provision of a model of the scene enables accurate and
+                            efficient participation of the robot arm in the workspace.
+                            This participation is carried out via a simplified path-
+                            planning procedure on top of a tested kinematic approach
+                            to control, which we build up in this work and evaluate its
+                            performance. Participation in this sense, takes the form of
+                            stacking and sorting tasks on the set of blocks to varying
+                            degrees of complexity.
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="projects/lc_test5_v2.png" alt="Project Image">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">3D Lidar SLAM for Dandelion picking legged robot</h3>
+                        <p class="project-description">Implementation of a robotic arm capable of completing
+                            manipulation tasks on a set of wooden blocks. Our imple-
+                            mentation is built on top of a learning platform which
+                            consists of the arm itself, a checkered workspace with
+                            accompanying fiducial markers, and an RGBD camera
+                            mounted overhead. A robust method to achieve a rich scene
+                            understanding in a fixed workspace frame is presented,
+                            providing pose information for both the robotic arm as
+                            well as all blocks in view of the RGBD camera. The
+                            provision of a model of the scene enables accurate and
+                            efficient participation of the robot arm in the workspace.
+                            This participation is carried out via a simplified path-
+                            planning procedure on top of a tested kinematic approach
+                            to control, which we build up in this work and evaluate its
+                            performance. Participation in this sense, takes the form of
+                            stacking and sorting tasks on the set of blocks to varying
+                            degrees of complexity.
+
                         </p>
                     </div>
                 </div>
@@ -81,7 +148,7 @@
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Pushing Dynamics model for robot planning and control</h3>
-                        <p class="project-description">A residual dynamics model is implemented that predicts the next state given the current state and action. This is a neural network that maps from the concatenation of the state and action vectors to the state difference vector. This implementation defines a fully connected neural network with three layers, where the first two layers have ReLU activation functions and the last layer is linear. The output of the last layer is added to the input state to obtain the predicted next state. The network takes as input the concatenation of the state and action tensors.  SE2poseloss was used as the loss function to predict the pose of the block after taking an action. The SE2PoseLoss is defined as a class inheriting from nn.Module, and it takes as input the predicted and target poses, and computes the mean squared error loss between the two poses. The purpose of using the SE2PoseLoss is to train the dynamics model to predict the pose of the block after taking an action. The aim is to minimize the difference between the predicted and target poses, which will allow the robot to push the block more accurately towards the goal configuration.
+                        <p class="project-description">Implemented a pushing dynamic model to train a robot that was simulated using Pybullet to push an object to a goal pose. A residual dynamics model is implemented that predicts the next state given the current state and action. This is a neural network that maps from the concatenation of the state and action vectors to the state difference vector. This implementation defines a fully connected neural network with three layers, where the first two layers have ReLU activation functions and the last layer is linear. The output of the last layer is added to the input state to obtain the predicted next state. The network takes as input the concatenation of the state and action tensors.  SE2poseloss was used as the loss function to predict the pose of the block after taking an action. The SE2PoseLoss is defined as a class inheriting from nn.Module, and it takes as input the predicted and target poses, and computes the mean squared error loss between the two poses. The purpose of using the SE2PoseLoss is to train the dynamics model to predict the pose of the block after taking an action. The aim is to minimize the difference between the predicted and target poses, which will allow the robot to push the block more accurately towards the goal configuration.
 
                         </p>
                     </div>
@@ -89,28 +156,73 @@
 
                 <div class="project-item">
                     <div class="project-image">
-                        <img src="projects/p1.png" alt="Project Image">
+                        <img src="projects/SHAKESPEAR - GPT.png" alt="Project Image">
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">Pushing Dynamics model for robot planning and control</h3>
-                        <p class="project-description">Implemented a pushing dynamic model to train a robot that was simulated using Pybullet to push an object to a goal pose. This project entailed collecting dynamics data, processing the data, training a model of the dynamics, and using it for planning a sequence of pushes to reach the target location. The pushing block is visualized in white. In green, we visualize the goal pose of the block.
+                        <h3 class="project-title">Shakespear GPT</h3>
+                        <p class="project-description">In my project "ShakespeareGPT," I embarked on the fascinating journey of constructing a language model capable of generating Shakespearean-style text. Drawing inspiration from Andrej Karpathy's tutorial, this venture was rooted in the tiny-Shakespeare dataset, slightly modified to align with the model's learning process.
+
+                            The project's essence was to create a Generative Pretrained Transformer (GPT) model from scratch, leveraging the power of neural network architectures and deep learning. At its core, the model used an advanced mechanism to process and understand the nuances of Shakespeare's language, learning from the dataset to replicate his unique writing style.
+                            
+                            To ensure the model's effectiveness, I experimented with different approaches to text processing. This included training variations of the model using character-level analysis and byte-pair encoding methods, allowing me to observe how varying linguistic granularities influenced the generated text.
+                            
+                            "ShakespeareGPT" stands out as a blend of literary art and cutting-edge technology. It’s a project that pushed the boundaries of natural language processing, showcasing how AI can not only mimic the linguistic style of one of history's greatest playwrights but also create new, original compositions in his signature style. This venture was not just a technical accomplishment but also a creative exploration into how AI can be used to continue the legacy of literary giants.
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="projects/mask-rcnn.png" alt="Project Image">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Mask R-CNN Backbone and Optimization</h3>
+                        <p class="project-description">Improvised an in-depth implementation and assessment of the Mask R-CNN model utilizing Pytorch’s mask R-CNN and
+                            object detection framework for image instance segmentation
+                            Trained, and tested the Mask R-CNN model on various balanced and diverse data-sets, including the COCO data-set, to
+                            assess its performance in terms of accuracy, speed, and adaptability
+                            Explored various backbone architecture implementations, such as ResNet50 with a Feature Pyramid Network, MobileNetV2,
+                            VGG16, and AlexNet, in combination with different optimizers, to improve the model’s performance
+                        </p>
+                    </div>
+                </div>
+
+                
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="projects/adaptive_cruise_Control.jpg" alt="Project Image">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Smart Adaptive Cruise Control</h3>
+                        <p class="project-description">Designed a simple adaptive cruise control system.  for which a CLF-CBF-QP controller was formulated and implemented in MATLAB, here CLF is formulated to act as a soft constraint to handle adaptive speed regulation that follows a user-set speed when there is no vehicle ahead in the lane. and CBF is enforced as a safety critical constraint when there is a vehicle ahead, and the speed needs to be adaptively reduced to maintain a fixed time-headway based follow distance.
                         </p>
                     </div>
                 </div>
 
                 <div class="project-item">
                     <div class="project-image">
-                        <img src="projects/p1.png" alt="Project Image">
+                        <img src="projects/535.png" alt="Project Image">
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">Pushing Dynamics model for robot planning and control</h3>
-                        <p class="project-description">Implemented a pushing dynamic model to train a robot that was simulated using Pybullet to push an object to a goal pose. This project entailed collecting dynamics data, processing the data, training a model of the dynamics, and using it for planning a sequence of pushes to reach the target location. The pushing block is visualized in white. In green, we visualize the goal pose of the block.
+                        <h3 class="project-title">Advanced Control Systems for Autonomous Racing: Navigating the Unknown Obstacles</h3>
+                        <p class="project-description">In our project "Advanced Control Systems for Autonomous Racing: Navigating the Unknown," our team embarked on the challenge of designing a sophisticated controller for a self-driving car navigating a predefined racetrack with unpredictable obstacles. Initially, we explored trajectory optimization using Model Predictive Control (MPC), drawing on techniques from previous coursework. Despite numerous iterations, this approach achieved only partial track completion without obstacles and suffered from slow response times. We then experimented with the Linear Quadratic Regulator (LQR) method, but it too fell short of our expectations.
+
+                            The breakthrough came with the implementation of a Proportional-Integral-Derivative (PID) controller, augmented by the Stanley algorithm for efficient track following and a novel lane-switching method to circumvent obstacles. This strategy not only met but exceeded our project requirements, allowing us to complete the full track with obstacles in a commendable time of seven minutes.
                         </p>
                     </div>
                 </div>
+
+
+
+
+
+                
                 <!-- Repeat for other projects -->
             </div>
         </section>
+        <a href="index.html" class="home-button">
+            <i class="fas fa-home"></i> <!-- Font Awesome Home Icon -->
+        </a>
 
 
     </body>
