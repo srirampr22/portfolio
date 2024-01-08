@@ -71,7 +71,7 @@
                     <div class="project-info">
                         <h3 class="project-title">Warehouse robot</h3>
                         <p class="project-description">
-                            The warehouse roobt was desgined to autonomously localize, navigate and explore around an unknown space with the goal of pick and placing blocks. 
+                            The warehouse robot is two wheeled diffrential drive robot based on the Mbot platform, that it equipped with a 2D RP Lidar, an RGB camera, wheel encoders and IMU's, it was desgined to autonomously localize, navigate and explore around an unknown space with the goal of pick and placing blocks. 
                             The project focuses on using various sensors processed through a SLAM implementation (AMCL/Particle-filter for localization and a 2D Occupancy - Grid based mapping framework) to map and navigate new spaces autonomously with the 2 Wheeled differential-drive MBot.
                             the motion controller was designed using odom-
                             etry, PID, and IMU sensors; implemented SLAM using the LiDAR in order to map the area and localize the robot;
@@ -91,24 +91,10 @@
                         <img src="projects/Armlab.jpeg" alt="Project Image">
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">Arm Robot</h3>
-                        <p class="project-description">Implementation of a robotic arm capable of completing
-                            manipulation tasks on a set of wooden blocks. Our imple-
-                            mentation is built on top of a learning platform which
-                            consists of the arm itself, a checkered workspace with
-                            accompanying fiducial markers, and an RGBD camera
-                            mounted overhead. A robust method to achieve a rich scene
-                            understanding in a fixed workspace frame is presented,
-                            providing pose information for both the robotic arm as
-                            well as all blocks in view of the RGBD camera. The
-                            provision of a model of the scene enables accurate and
-                            efficient participation of the robot arm in the workspace.
-                            This participation is carried out via a simplified path-
-                            planning procedure on top of a tested kinematic approach
-                            to control, which we build up in this work and evaluate its
-                            performance. Participation in this sense, takes the form of
-                            stacking and sorting tasks on the set of blocks to varying
-                            degrees of complexity.
+                        <h3 class="project-title">PrecisionStack: 5DOF Robotic Arm for Object Manipulation.</h3>
+                        <p class="project-description"> Spearheaded the development of a 5DOF robotics arm using the Interbotix RX200 robot, integrating an Intel RealSense L515 camera in a checkered, marker-laden workspace to showcase precise, intelligent manipulation capabilities.
+
+                            the project harnessed advanced image processing and computer vision techniques to accurately identify and track wooden blocks. The implemented block detection and tracking algorithm showcased the ability to handle real-time image data, effectively differentiating and monitoring the position and orientation of multiple blocks, highlighting the system's adeptness in scene understanding and dynamic object tracking. The project featured an innovative application of Forward Kinematics (FK) and Inverse Kinematics (IK). The FK was used to determine the end-effector's position based on robot joint angles, while the IK solution was instrumental in calculating these angles to achieve the desired position of the end-effector. This sophisticated kinematic framework was intricately tied to the trajectory and motion planning of the robotic arm, enabling it to execute complex tasks like stacking and sorting with high precision and efficiency, illustrating a seamless blend of theoretical robotics principles and practical implementation.
 
                         </p>
                     </div>
@@ -120,23 +106,11 @@
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">3D Lidar SLAM for Dandelion picking legged robot</h3>
-                        <p class="project-description">Implementation of a robotic arm capable of completing
-                            manipulation tasks on a set of wooden blocks. Our imple-
-                            mentation is built on top of a learning platform which
-                            consists of the arm itself, a checkered workspace with
-                            accompanying fiducial markers, and an RGBD camera
-                            mounted overhead. A robust method to achieve a rich scene
-                            understanding in a fixed workspace frame is presented,
-                            providing pose information for both the robotic arm as
-                            well as all blocks in view of the RGBD camera. The
-                            provision of a model of the scene enables accurate and
-                            efficient participation of the robot arm in the workspace.
-                            This participation is carried out via a simplified path-
-                            planning procedure on top of a tested kinematic approach
-                            to control, which we build up in this work and evaluate its
-                            performance. Participation in this sense, takes the form of
-                            stacking and sorting tasks on the set of blocks to varying
-                            degrees of complexity.
+                        <p class="project-description">The Dandelion Picking BigAnt's SLAM system excels in complex environmental mapping and navigation, integrating advanced feature extraction and robust optimization techniques. It begins with a precise differentiation of point cloud data into edges and surfaces, essential for understanding the environment's intricate details. The system's core strength lies in its efficient data processing, utilizing KD-Trees for rapid alignment of new data with the existing map.
+
+                            Central to its operation is the Ceres Solver, an optimization framework that iteratively refines the BigAnt's pose to ensure accurate alignment with the environmental model. This process, underpinned by the system's ability to continually update the local map with transformed sensor data, maintains a dynamic and detailed environmental representation.
+                            
+                            Global map optimization is a standout feature, with pose graph optimization being critical for trajectory accuracy. Triggered by innovative AprilTag-based loop closure detection, this process employs the Levenberg-Marquardt algorithm to reconcile odometry and environmental data, enhancing the BigAnt's navigational precision. Geometric consistency verification is integral to this phase, ensuring new data's alignment with the map, further solidifying the system's reliability.
 
                         </p>
                     </div>
