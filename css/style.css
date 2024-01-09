@@ -623,7 +623,8 @@ label {
 
 @media (max-width: 768px) {
   .exp-item {
-    flex-direction: column; /* Stack items vertically on smaller screens */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .exp-image {
