@@ -106,7 +106,7 @@ span.glyphicon.glyphicon-triangle-bottom {
 }
 .about{
 	background-size: cover;
-	background: #040c04;
+	background: #000000;
 /* 	background-image: url('../img/1.jpg');
  */	padding-bottom: 5vw;
 	text-align: center;
@@ -622,15 +622,48 @@ label {
 
 
 @media (max-width: 768px) {
+  .exp-item {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .exp-image {
+    margin-right: 0; /* Remove right margin for image */
+    margin-bottom: 10px; /* Space below image */
+    align-self: center; /* Center the image */
+  }
+
+  .exp-hidden-content {
+    display: block;
+    opacity: 0;
+    max-height: 0; /* Start with hidden content */
+    overflow: hidden; /* Hide overflow */
+    transition: opacity 0.5s ease, max-height 0.5s ease; /* Smooth transition */
+  }
+
+  .exp-item:hover .exp-hidden-content {
+    opacity: 1;
+    max-height: 1000px; /* Increase max-height */
+  }
+
+  .media-container {
+    flex-direction: column; /* Stack media items vertically */
+    align-items: center; /* Center-align the items */
+  }
+
   .youtube-video-container,
   .gif-container {
-      width: 100%; /* Full width on smaller screens */
-      margin-bottom: 20px; /* Space between items when they stack */
-      margin-right: 0;
+    width: 100%; /* Full width of container */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Space between media items */
   }
 
   .skills-list {
-    justify-content: start; /* Align items to the start on smaller screens */
+    justify-content: center; /* Center skills list */
+    flex-direction: column; /* Stack skills list vertically */
+  }
+
+  .skills-list li {
+    margin-bottom: 5px; /* Space between skills */
   }
 }
 
