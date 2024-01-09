@@ -69,10 +69,24 @@ body{
   }
 }
 
+.profile-pic {
+  max-width: 100%; /* Ensures the image is never wider than its container */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 50%; /* Optional: makes the image circular */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .profile-pic {
+      width: 50%; /* Adjusts the size on smaller screens */
+  }
+}
+
+
 /* HTML element that will have the glowing effect */
 .header-section {
-  background: #040c04;
-  background-image: url('../img/1.jpg');
+  background:#000000;
+  /* background-image: url('../img/1.jpg'); */
   text-align: center;
   min-height: 500px;
   height:100vh;
@@ -125,6 +139,19 @@ span.glyphicon.glyphicon-triangle-bottom {
   	text-transform: capitalize;
   	color: #ffffff;
   	padding-bottom: 2%;
+}
+
+/* Media query for smaller screens, e.g., less than 768px width */
+@media (max-width: 768px) {
+  .header-section {
+    min-height: auto; /* Adjust min-height for smaller screens */
+    height: auto;
+    padding-bottom: 2em; /* Add some padding at the bottom */
+  }
+
+  .about {
+    padding-top: 2em; /* Reduce the top padding for the about section */
+  }
 }
 
 .yourPic{
