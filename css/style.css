@@ -221,7 +221,6 @@ span.glyphicon.glyphicon-triangle-bottom {
   overflow: auto;
   background: transparent;
   min-height: 306px;
-  /* ... other styles ... */
 }
 
 .education-card_1::before {
@@ -376,9 +375,28 @@ span.glyphicon.glyphicon-triangle-bottom {
 
 .skills {
   background-size: cover;
-  background: #eff3ef;
+  background: #ffffff;
   padding-bottom: 5vw;
   text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Creates a responsive grid */
+  gap: 20px; /* Space between grid items */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+.skill-logo img {
+  max-width: 100%; /* Ensures the logo is fully contained within its grid cell */
+  height: auto; /* Maintains aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust grid column size for smaller screens */
+  }
 }
 
 .skills-heading {
