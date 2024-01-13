@@ -726,7 +726,7 @@ label {
 }
 
 body .projects .main-heading {
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   font-family: 'DM-Serif';
   font-size: 4em;
   text-transform: capitalize;
@@ -735,6 +735,16 @@ body .projects .main-heading {
   text-align: center;
 }
 
+body .projects .sub-heading {
+  margin-bottom: 10px;
+  font-family: 'DM-Serif';
+  font-size: 0.7em;
+  color: #ffffff;
+  padding-bottom: 10px; /* Adjust this value as needed */
+  text-align: left;
+  /* float: left; Add this line to align the text to the left */
+  /* clear: both; Add this line to clear any floating elements */
+}
 
 .project-item {
   display: flex;
@@ -745,7 +755,7 @@ body .projects .main-heading {
 .project-image img {
   width: 200px; /* Adjust as needed */
   height: auto;
-  margin-right: 200px; /* Space between image and text */
+  margin-right: 130px; /* Space between image and text */
 }
 
 .project-image_1 img {
@@ -762,6 +772,14 @@ body .projects .main-heading {
   font-family: 'DM-Serif';
   font-size: 1.5em;
   color: #ffffff;
+  cursor: pointer; /* Indicates the title is interactive */
+  text-align: left;
+}
+
+.project-sub-title {
+  font-family: 'DM-Serif';
+  font-size: 1.2em;
+  color: #e6be9e;
   cursor: pointer; /* Indicates the title is interactive */
   text-align: left;
 }
