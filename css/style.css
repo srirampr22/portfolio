@@ -388,16 +388,39 @@ span.glyphicon.glyphicon-triangle-bottom {
   align-items: center; /* Center items vertically */
 }
 
+.skill-logo {
+  height: 80px; /* Set a fixed height for logo containers */
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center logo horizontally */
+  align-items: center; /* Center logo vertically */
+  margin-bottom: 10px; /* Space between logo and text */
+}
+
 .skill-logo img {
-  max-width: 100%; /* Ensures the logo is fully contained within its grid cell */
-  height: auto; /* Maintains aspect ratio */
+  max-height: 100%; /* Ensure logo fits within the container */
+  max-width: 100%; /* Prevent logo from exceeding container width */
+}
+
+.skill-text {
+  font-family: 'Raleway';
+  font-size: 1em;
+  color: #0c0b0b;
+  text-align: center; /* Ensure text is centered */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }
 
 @media (max-width: 768px) {
   .skills-grid {
-      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust grid column size for smaller screens */
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   }
 }
+
 
 .skills-heading {
   font-family: 'DM-Serif';
@@ -544,6 +567,8 @@ label {
 
 .exp-content {
   position: relative;
+  color: #ffffff;
+  text-align: left;
   flex: 1; /* Take up remaining space */
 }
 
@@ -551,6 +576,7 @@ label {
   font-family: 'DM-Serif';
   font-size: 1.5em;
   color: #ffffff;
+  text-align: center;
   margin-bottom: 10px; /* Space below the title */
 }
 
@@ -559,27 +585,6 @@ label {
   font-size: 4em;
   color: #ffffff;
   margin-bottom: 40px; /* Space below the title */
-}
-
-
-.exp-hidden-content {
-  display: block;
-  opacity: 0;
-  transition: opacity 0.5s ease; /* Increase the duration to 0.5s or more for a smoother effect */
-  font-family: 'Raleway';
-  font-size: 1em;
-  text-transform: capitalize;
-  color: #ffffff;
-  padding-bottom: 2%;
-  text-align: left;
-  max-height: 0; /* Add this to start with hidden content */
-  overflow: hidden; /* Add this to hide the overflow when content is hidden */
-}
-
-.exp-item:hover .exp-hidden-content {
-  opacity: 1;
-  max-height: 1000px; /* Increase max-height to accommodate the content size */
-  transition: opacity 0.8s ease, max-height 0.8s ease; /* Add max-height to the transition for a smoother effect */
 }
 
 
@@ -637,6 +642,40 @@ label {
   object-fit: cover; /* Ensures the image covers the area without stretching */
 }
 
+/* ppt stuff */
+.pdf-container {
+  width: 320px; /* Specify the width */
+  height: 180px; /* Specify the height */
+}
+
+.pdf-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative; /* For the icon positioning */
+}
+
+.pdf-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  border-radius: 5px;
+}
+
+.pdf-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the icon */
+  width: 32px; /* Size of the icon */
+  height: 32px; /* Size of the icon */
+  border-radius: 50%;
+  background: url('experiences/pdf.png') no-repeat center center; /* PDF icon */
+  background-size: cover;
+  pointer-events: none; /* Ignore pointer events so the link is clickable */
+}
+
+/* ppt stuff */
 .skills-list {
   list-style-type: none; /* Removes default list bullets */
   padding: 0; /* Resets default padding */
@@ -688,7 +727,7 @@ label {
 
   .exp-item:hover .exp-hidden-content {
     opacity: 1;
-    max-height: 1000px; /* Increase max-height */
+    max-height: 10000px; /* Increase max-height */
   }
 
   .media-container {
@@ -698,7 +737,9 @@ label {
 
   .youtube-video-container,
   .gif-container {
-    width: 100%; /* Full width of container */
+    text-align: center;
+    width: 320px; /* Specify the width of the GIF */
+    height: 180px; /* Specify the height of the GIF */
     margin-right: 0; /* Remove right margin */
     margin-bottom: 10px; /* Space between media items */
   }

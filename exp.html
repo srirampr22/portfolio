@@ -72,20 +72,38 @@
 					<h3 class="exp-title">FLUENT Robotics Lab</h3>
 					<div class="exp-hidden-content">
 						<p class="exp-description">
-							Contributed to the system level development of the perception and navigation system for the Stretch RE2 robot, as part of the human-robot interaction project, aimed at enabling safe and intelligent robot-human interactions.
-            				Responsibilities included developing Perception capabilities such as Object detection, Pose estimation, Human action recognition, as well as Visual SLAM system using RTABmap, and motion planning using move-base.
+
+							<li> Working on developing predictive model algorithms than can infer human helpfulness towards robots in social spaces by incorporating individual factors of latent helpfulness and the contextual factors of human busyness and robot frequency of asking. with the goal of enabling safe and intelligent robot-human interactions.</li>
+
+							<li>Contributed to the system level software development of the perception and navigation system for the two wheeled diffrential drive Stretch RE2 robot equipped with Intel realsense D435i camera, IMU, Wheel encoder and a Cartisean arm manipulator.</li>
+							
+            				<li>Responsibilities included incorporating key perception capabilities such as Human Action Recognition, Human Pose estimation, Panoptic segmentation and object detection, as well as Visual SLAM system using RTABmap and Move-Base for motion planning as part of the indoor navigation stack.</li>
+
+							<li>Evaluated multiple Visual SLAM (RTABmap) and Visual-Inertial SLAM (Kimera, VINS, ORB-SLAM) systems, focusing on precision in pose estimation and computational efficiency. Performance metrics, including CPU usage, were benchmarked against a Ground Motion Capture System (Opti-Track) for accuracy verification.</li>
 						</p>
 						<!-- Skills List -->
 							<ul class="skills-list">
 								<li>Robot Perception and Navigation</li>
-								<li>Visual/Visual-inertial SLAM</li>
+								<li>Visual/Visual-inertial SLAM (RTABmap, VINS, Kimera, ORB-SLAM)</li>
 								<li>Motion Planning(Move base)</li>
+								<li>Git</li>
+								<li>C++</li>
+								<li>Python</li>
+								<li>Pytorch</li>
+								<li>CUDA</li>
+								<li>Bash/Shell scripting</li>
 								<li>Deep Learning</li>
 								<li>ROS</li>
+								<li>ROS2</li>
 								<li>Docker</li>
-								<li>Motion Capture Systems</li>
+								<li>Cmake</li>
+								<li>Opti Tracker and Motive</li>
 								<li>System Integration</li>
 								<li>Human Robot Interaction</li>
+								<li>Full stack software development</li>
+								<li>Human Action recognition (PyslowFast)</li>
+								<li>Human Pose estimation (OpenPose)</li>
+								<li>Object detection and segmentation (Detectron2)</li>
 								<!-- Add more skills as needed -->
 							</ul>
 						<!-- Media Container for YouTube and GIF -->
@@ -116,10 +134,13 @@
 					<h3 class="exp-title">Biologically Inspired Robotics and Dynamical Systems Lab</h3>
 					<div class="exp-hidden-content">
 						<p class="exp-description">
-							Developed a perception pipeline using Intel realsense L515 camera to detect, track and create a map of dandelions.
-                        Utilized classical CV methods to detect and produce a semantic mask of round yellow dandelions on the high level and
-                        implemented a robust LiDAR-based SLAM technique optimizing feature residuals with Gauss-Newton for precise
-                        odometry and mapping on the low level.
+							<li>Devoloped a perception and SLAM stack to enable autonomous naviagtion of heaxpedal robot for picking dandleions</li>
+							<li>Developed a perception pipeline using Intel realsense L515 camera to detect, track and create a map of dandelions.</li>
+                        	<li>Incorporated computer vision methods and clusterning algorithms to detect and produce a semantic mask of round yellow dandelions while tracking them consistently across time.</li>
+							<li>Engineered an autonomous environmental mapping system using an intel realsense L515 camera, leveraging SLAM techniques to enable precise localization and exploration. Key features included real-time odometery estimation,
+								AprilTag-based loop closure detection, and geometric consistency verification.</li>
+							<li>Devoloping safe motion planning algorithms for the hexapedal robot using affine geometric heat flow and autonomous legged hill ascent</li>
+    
 						</p>
 						<!-- Skills List -->
 						<ul class="skills-list">
@@ -128,10 +149,18 @@
 							<li>Motion Planning</li>
 							<li>Graph-Based SLAM</li>
 							<li>GTSAM</li>
+							<li>Google Ceres Solver</li>
+							<li>Python</li>
+							<li>C++</li>
+							<li>Git</li>
+							<li>Cmake</li>
+							<li>Numpy</li>
+							<li>Clusterning Algorithms (DBSCAN)</li>
+							<li>System intergration</li>
 							<li>April tag based Loop closure system</li>
 							<li>ROS</li>
 							<li>Machine Learning</li>
-							<li>Non-linear least squares optimization solver. </li>
+							<li>Non-linear least squares optimization</li>
 							<!-- Add more skills as needed -->
 						</ul>
 						<!-- Media Container for YouTube and GIF -->
@@ -162,20 +191,43 @@
 					<h3 class="exp-title">Distributed Aerospace Systems and Control Laboratory</h3>
 					<div class="exp-hidden-content">
 						<p class="exp-description">
-							Devised a controller that overcomes the main limitations of traditional approaches based on periodic controllers, by
-                        introducing the notion of a safe period, which enforces a safety guarantee for implementing ZOH control.
 
-						Worked on the implementation of Self-triggered Control for Safety-Critical Systems using Control Barrier Functions
+							<li>Worked on the implementation of self-triggered control using Control Barrier Functions to enhance safety and efficiency in critical systems.</li>
+							<li>Explored CBF fundamentals, including safe sets, barrier certificates, and stability conditions, and demonstrated its role in ensuring system states stay within predefined safe regions.</li>
+							<li>Implemented various design techniques, including optimization-based methods and quadratic programming, and explored modeling and robust control techniques for ensuring robustness against parameter variations in CBF-based control. </li>
+							<li>Applied CBFs to a double integrator system to showcase their real-world use in safety-critical control, and Developed a CBF-based control law effectively constraining system states within predefined safe limits.</li>
+							<li>Designed a controller addressing limitations of traditional periodic controllers. and intoduced the concept of a "safe period" for implementing Zero-Order Hold (ZOH) control, ensuring safety guarantees.</li>
 						</p>
 
 						<!-- Skills List -->
 						<ul class="skills-list">
 							<li>Safety Critical Control systems</li>
 							<li>Adaptive Control</li>
+							<li>Control Barrier Functions</li>
+							<li>Optimization</li>
+							<li>Quadratic Programming</li>
 							<li>MATLAB</li>
 							<!-- Add more skills as needed -->
 						</ul>
 						<!--  -->
+
+						<div class="media-container">
+							<!-- YouTube Video Container -->
+							<div class="pdf-container">
+								<a href="DASC 590 presentation revamped-1.pdf" target="_blank" class="pdf-link">
+									<img src="img/DASC_lab_report.png" alt="PDF Thumbnail" class="pdf-thumbnail">
+									<span class="pdf-icon"></span>
+								</a>
+							</div>
+							<!-- GIF Image Container -->
+							<div class="gif-container">
+								<img src="img/DASC_result.gif" alt="Relevant Gif" class="project-gif">
+							</div>
+						</div>
+
+						
+						
+						
 					</div>
 				</div>
 			</div>
@@ -189,7 +241,12 @@
 					<h3 class="exp-title">Syrma SGS (Internship)</h3>
 					<div class="exp-hidden-content">
 						<p class="exp-description">
-							Designed a concept for a 6-DOF arm-robot ultrasonic welding system aimed at enhancing high-volume production yield in a semi-automated RFID-tag production line. To bring this concept to life, I programmed a simulation using GAZEBO and ROS, depicting the arm-robot performing the welding action. Further advancing this project, I implemented 'teach and repeat' waypoint navigation to demonstrate the required actions on the assembly line. To evaluate the system's efficiency, I conducted tests comparing the yield from manual operation processes with the robot's automated process over a set time period. This testing revealed a remarkable potential increase in production yield, reaching up to 98.8%, showcasing the significant impact of automation in industrial settings.
+							<li>Designed a concept for a 6-DOF arm-robot ultrasonic welding system aimed at enhancing high-volume production yield in a semi-automated RFID-tag production line.</li>
+							<li>Created a simulation using GAZEBO and ROS, illustrating an arm-robot performing welding tasks.</li>
+							<li>Enhanced the project by implementing 'teach and repeat' waypoint navigation to demonstrate assembly line actions.</li>
+							<li>Compared manual operation processes with the robot's automation over a specific time period.</li>
+							<li>    Test results revealed a substantial potential increase in production yield.
+								Achieved yields of up to 98.8%, highlighting the significant impact of automation in industrial settings.</li>
 						</p>
 
 						<!-- Skills List -->
