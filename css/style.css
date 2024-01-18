@@ -1202,7 +1202,7 @@ font-size: 2em;
 }
 .contactMe{
 
-}
+
 .contact-section {
   padding: 4em 0;
   background: #000000;
@@ -1222,11 +1222,14 @@ font-size: 2em;
   /* Additional styling if needed */
   text-align: center;
   margin-bottom: 100px;
+  display: flex; /* Center-align items both horizontally and vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .social-icon {
   display: inline-block;
-  margin-right: 80px;
+  margin-right: 50px;
   color: #ffffff; /* Change as needed */
   font-size: 50px;
   text-decoration: none;
@@ -1234,6 +1237,7 @@ font-size: 2em;
   z-index: 0;
   cursor: pointer;
 }
+
 
 .social-icon:before {
   content: '';
@@ -1265,7 +1269,7 @@ font-size: 2em;
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
-
+}
 
 .contact-details form input[type="text"],.contact-details form textarea {
 	width: 100%;
