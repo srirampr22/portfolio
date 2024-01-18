@@ -48,11 +48,11 @@
                             
                             <li  data-toggle="collapse" data-target=".navbar-collapse.in"><a href="index.html">Home</a>
                             </li>
-                            <li><a href="#about" data-toggle="collapse" data-target=".navbar-collapse.in">About</a></li>
-                            <li><a href="#skills" data-toggle="collapse" data-target=".navbar-collapse.in" >Skills</a></li>
+                            <li><a href="index.html#about" data-toggle="collapse" data-target=".navbar-collapse.in">About</a></li>
+                            <li><a href="index.html#skills" data-toggle="collapse" data-target=".navbar-collapse.in" >Skills</a></li>
                             <li><a href="exp.html" data-toggle="collapse" data-target=".navbar-collapse.in">Experience</a></li>
                             <li><a class="active" href="projects.html" data-toggle="collapse" data-target=".navbar-collapse.in">Projects</a></li>
-                            <li><a href="#contact" data-toggle="collapse" data-target=".navbar-collapse.in">Contact Me</a>
+                            <li><a href="index.html#contact" data-toggle="collapse" data-target=".navbar-collapse.in">Contact Me</a>
                             </li>
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -62,21 +62,29 @@
 
         <section class="container-fluid projects fadeIn" id="projects">
             <div class="container">
-                <h1 class="main-heading">My Projects</h1>
+                <h1 class="main-heading">Projects</h1>
 
                
-                <h1 class="sub-heading">* Hover over the images to view more details about the projects</h1>
+                <h2 class="sub-heading">* Click on the images to view more details</h2>
                
                 
                 <!-- Project Item -->
                 <div class="project-item">
-                    <div class="project-image">
+                    <div class="project-image" onclick="toggleProjectDescription(1)">
                         <img src="projects/donatello.jpeg" alt="Project Image">
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Warehouse robot </h3>
+
                         <h3 class="project-sub-title">Navigation, Controls, SLAM, Planning</h3>
-                        <ul class="project-description">
+                        
+                            <div class="github-link">
+                                <a href="https://github.com/yourusername/yourrepository" target="_blank">
+                                    <i class="fab fa-github"></i> <span>Code</span>
+                                </a>
+                            </div>
+
+                        <ul class="project-description" id="project-description-1">
                             <li>The warehouse robot is two wheeled diffrential drive robot based on the Mbot platform, that it equipped with a 2D RP Lidar, an RGB camera, wheel encoders and IMU's, it was desgined to autonomously localize, navigate and explore around an unknown space with the goal of pick and placing blocks. </li>
                             <li>The project focuses on using various sensors processed through a SLAM implementation (AMCL/Particle-filter for localization and a 2D Occupancy - Grid based mapping framework) to map and navigate new spaces autonomously with the 2 Wheeled differential-drive MBot.
                                 the motion controller was designed using a KalmanFilter-based PID controller to maintain precise odom
@@ -95,13 +103,18 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-image">
+                    <div class="project-image" onclick="toggleProjectDescription(2)">
                         <img src="projects/Armlab.jpeg" alt="Project Image">
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">PrecisionStack: 5DOF Robotic Arm for Object Manipulation. </h3>
                         <h3 class="project-sub-title">Perception, Planning and Robot Kinematics</h3>
-                        <ul class="project-description"> <li>Spearheaded the development of a 5DOF robotics arm using the Interbotix RX200 robot, integrating an Intel RealSense L515 camera in a checkered, marker-laden workspace to showcase precise, intelligent manipulation capabilities.
+                        <div class="github-link">
+                            <a href="https://github.com/yourusername/yourrepository" target="_blank">
+                                <i class="fab fa-github"></i> <span>Code</span>
+                            </a>
+                        </div>
+                        <ul class="project-description" id="project-description-2"> <li>Spearheaded the development of a 5DOF robotics arm using the Interbotix RX200 robot, integrating an Intel RealSense L515 camera in a checkered, marker-laden workspace to showcase precise, intelligent manipulation capabilities.
                         </li>
                             <li>Project harnessed advanced image processing and computer vision techniques to accurately identify and track wooden blocks. The implemented block detection and tracking algorithm showcased the ability to handle real-time image data, effectively differentiating and monitoring the position and orientation of multiple blocks, highlighting the system's adeptness in scene understanding and dynamic object tracking. </li> 
                             <li>The project featured an Forward Kinematics (FK) and Inverse Kinematics (IK) framework. The FK was used to determine the end-effector's position based on robot joint angles, while the IK solution was instrumental in calculating these angles to achieve the desired position of the end-effector. 
@@ -112,13 +125,18 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-image">
+                    <div class="project-image" onclick="toggleProjectDescription(3)">
                         <img src="projects/lc_test5_v2.png" alt="Project Image">
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">3D Lidar SLAM for Dandelion picking legged robot </h3>
                         <h3 class="project-sub-title">Perception, Navigation, SLAM, Computer vision</h3>
-                        <ul class="project-description"><li>The Dandelion Picking BigAnt's SLAM system excels in complex environmental mapping and navigation, integrating advanced feature extraction and robust optimization techniques.</li> 
+                        <div class="github-link">
+                            <a href="https://github.com/yourusername/yourrepository" target="_blank">
+                                <i class="fab fa-github"></i> <span>Code</span>
+                            </a>
+                        </div>
+                        <ul class="project-description" id="project-description-3"><li>The Dandelion Picking BigAnt's SLAM system excels in complex environmental mapping and navigation, integrating advanced feature extraction and robust optimization techniques.</li> 
                             <li>It begins with a precise differentiation of point cloud data into edges and surfaces, essential for understanding the environment's intricate details. The system's core strength lies in its efficient data processing, utilizing KD-Trees for rapid alignment of new data with the existing map.
                             </li>
                             <li>Central to its operation is the Ceres Solver, an optimization framework that iteratively refines the BigAnt's pose to ensure accurate alignment with the environmental model. This process, underpinned by the system's ability to continually update the local map with transformed sensor data, maintains a dynamic and detailed environmental representation.</li>
@@ -130,13 +148,18 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-image">
+                    <div class="project-image" onclick="toggleProjectDescription(4)">
                         <img src="projects/p1.png" alt="Project Image">
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Pushing Dynamics model for robot planning and control </h3>
                         <h3 class="project-sub-title">Planning, Predictive Control, Machine Learning</h3>
-                        <ul class="project-description"><li>Implemented a pushing dynamic model to train a robot that was simulated using Pybullet to push an object to a goal pose. A residual dynamics model is implemented that predicts the next state given the current state and action. This is a neural network that maps from the concatenation of the state and action vectors to the state difference vector. </li>
+                        <div class="github-link">
+                            <a href="https://github.com/yourusername/yourrepository" target="_blank">
+                                <i class="fab fa-github"></i> <span>Code</span>
+                            </a>
+                        </div>
+                        <ul class="project-description" id="project-description-4"><li>Implemented a pushing dynamic model to train a robot that was simulated using Pybullet to push an object to a goal pose. A residual dynamics model is implemented that predicts the next state given the current state and action. This is a neural network that maps from the concatenation of the state and action vectors to the state difference vector. </li>
                             <li>This implementation defines a fully connected neural network with three layers, where the first two layers have ReLU activation functions and the last layer is linear. The output of the last layer is added to the input state to obtain the predicted next state. The network takes as input the concatenation of the state and action tensors.</li>
                             <li>SE2poseloss was used as the loss function to predict the pose of the block after taking an action. The SE2PoseLoss is defined as a class inheriting from nn.Module, and it takes as input the predicted and target poses, and computes the mean squared error loss between the two poses. The purpose of using the SE2PoseLoss is to train the dynamics model to predict the pose of the block after taking an action. The aim is to minimize the difference between the predicted and target poses, which will allow the robot to push the block more accurately towards the goal configuration.
                             </li>
@@ -145,13 +168,18 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-image">
+                    <div class="project-image" onclick="toggleProjectDescription(5)">
                         <img src="projects/SHAKESPEAR - GPT.png" alt="Project Image">
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Shakespear GPT </h3>
                         <h3 class="project-sub-title">Deep-Learning, Large Language Model, Transformers</h3>
-                        <ul class="project-description">
+                        <div class="github-link">
+                            <a href="https://github.com/yourusername/yourrepository" target="_blank">
+                                <i class="fab fa-github"></i> <span>Code</span>
+                            </a>
+                        </div>
+                        <ul class="project-description" id="project-description-5">
                             <li>In my project "ShakespeareGPT," I embarked on the fascinating journey of constructing a language model capable of generating Shakespearean-style text. Drawing inspiration from Andrej Karpathy's tutorial, this venture was rooted in the tiny-Shakespeare dataset, slightly modified to align with the model's learning process.
                             </li>
                             <li>Project's essence was to create a Generative Pretrained Transformer (GPT) model from scratch, leveraging the power of neural network architectures and deep learning. At its core, the model used an advanced mechanism to process and understand the nuances of Shakespeare's language, learning from the dataset to replicate his unique writing style.
@@ -165,13 +193,18 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-image">
+                    <div class="project-image" onclick="toggleProjectDescription(6)">
                         <img src="projects/mask-rcnn.png" alt="Project Image">
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Mask R-CNN Backbone and Optimization </h3>
+                        <div class="github-link">
+                            <a href="https://github.com/yourusername/yourrepository" target="_blank">
+                                <i class="fab fa-github"></i> <span>Code</span>
+                            </a>
+                        </div>
                         <h3 class="project-sub-title">Deep-Learning, Perception</h3>
-                        <ul class="project-description">
+                        <ul class="project-description" id="project-description-6">
                             <li>Improvised an in-depth implementation and assessment of the Mask R-CNN model utilizing Pytorch’s mask R-CNN and
                                 object detection framework for image instance segmentation.</li>
                             <li>Trained, and tested the Mask R-CNN model on various balanced and diverse data-sets, including the COCO data-set, to
@@ -185,13 +218,18 @@
                 
 
                 <div class="project-item">
-                    <div class="project-image">
+                    <div class="project-image" onclick="toggleProjectDescription(8)">
                         <img src="projects/adaptive_cruise_Control.jpg" alt="Project Image">
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Smart Adaptive Cruise Control</h3>
                         <h3 class="project-sub-title">ADAS, Adaptive Control, Safety Critical Systems</h3>
-                        <ul class="project-description">
+                        <div class="github-link">
+                            <a href="https://github.com/yourusername/yourrepository" target="_blank">
+                                <i class="fab fa-github"></i> <span>Code</span>
+                            </a>
+                        </div>
+                        <ul class="project-description" id="project-description-8">
                             <li>Designed a simple adaptive cruise control system.  for which a CLF-CBF-QP controller was formulated and implemented in MATLAB</li>
                             <li>Here CLF is formulated to act as a soft constraint to handle adaptive speed regulation that follows a user-set speed when there is no vehicle ahead in the lane. and CBF is enforced as a safety critical constraint when there is a vehicle ahead, and the speed needs to be adaptively reduced to maintain a fixed time-headway based follow distance.</li>
                         </ul>
@@ -199,13 +237,14 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-image">
+                    <div class="project-image" onclick="toggleProjectDescription(9)">
                         <img src="projects/535.png" alt="Project Image">
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Advanced Control Systems for Autonomous Racing: Navigating the Unknown Obstacles</h3>
                         <h3 class="project-sub-title">Control Systems, Autonomous Naviagtion</h3>
-                        <ul class="project-description"><li>Designed a sophisticated controller for a self-driving car navigating a predefined racetrack with unpredictable obstacles. Initially, explored trajectory optimization using Model Predictive Control (MPC), drawing on techniques from previous coursework. Despite numerous iterations, this approach achieved only partial track completion without obstacles and suffered from slow response times.</li> 
+                        
+                        <ul class="project-description" id="project-description-9"><li>Designed a sophisticated controller for a self-driving car navigating a predefined racetrack with unpredictable obstacles. Initially, explored trajectory optimization using Model Predictive Control (MPC), drawing on techniques from previous coursework. Despite numerous iterations, this approach achieved only partial track completion without obstacles and suffered from slow response times.</li> 
                             <li>We then experimented with the Linear Quadratic Regulator (LQR) method, but it too fell short of our expectations.
                             </li>
                             <li>The breakthrough came with the implementation of a Proportional-Integral-Derivative (PID) controller, augmented by the Stanley algorithm for efficient track following and a novel lane-switching method to circumvent obstacles. This strategy not only met but exceeded our project requirements, allowing us to complete the full track with obstacles in a commendable time of seven minutes.</li>

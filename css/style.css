@@ -507,7 +507,7 @@ span.glyphicon.glyphicon-triangle-bottom {
 
 .pub-title {
   font-family: 'Raleway';
-  font-size: 1.2em;
+  font-size: 1.8em;
   text-transform: capitalize;
   text-align: left;
   color: #0c0b0b;
@@ -552,16 +552,17 @@ label {
   padding: 15px;
   border-radius: 10px;
   transition: all 0.3s ease;
-  margin-top: 20px;
+  margin-top: 80px;
+  
 }
 
 .exp-image {
   flex: 0 0 auto; /* Do not grow or shrink */
-  margin-right: 20px; /* Space between image and the content */
+  margin-right: 150px; /* Space between image and the content */
 }
 
 .exp-image img {
-  width: 180px; /* Adjust as needed */
+  width: 220px; /* Adjust as needed */
   height: auto;
 }
 
@@ -570,14 +571,42 @@ label {
   color: #ffffff;
   text-align: left;
   flex: 1; /* Take up remaining space */
+  text-align: justify;
+  
+  /* text-indent: ; */
+}
+
+.exp-description {
+  list-style: none; /* Remove default list bullets */
+  padding: 0; /* Remove default padding */
+
+  font-family: 'Raleyway';
+  font-size: 1.3em;
+  background: #000000;
+
+  text-align: left; 
+}
+
+.exp-description li {
+  margin-bottom: 1px; /* Add space (line break) after each list item */
+  /* border-bottom: 1px solid #ccc; Add a horizontal line after each list item */
+  padding-bottom: 5px; /* Add padding at the bottom of each list item (adjust as needed) */
+}
+
+/* Add custom bullet points using ::before pseudo-element */
+.exp-description li::before {
+  content: "\2022"; /* Unicode character for a bullet point (•) */
+  position: absolute; /* Position the bullet point */
+  left: -15px; /* Adjust the left position to control the spacing between bullet point and text */
+  color: #ccc; /* Color of the bullet point */
 }
 
 .exp-title {
   font-family: 'DM-Serif';
-  font-size: 1.5em;
+  font-size: 1.9em;
   color: #ffffff;
   text-align: center;
-  margin-bottom: 10px; /* Space below the title */
+  margin-bottom: 30px; /* Space below the title */
 }
 
 .main-heading {
@@ -592,14 +621,21 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px; /* Space between the description and the media container */
+  margin-top: 50px; /* Space between the description and the media container */
   flex-wrap: wrap; /* Allows the items to wrap in smaller screens */
+}
+
+.youtube-video-container {
+  width: 320px; /* Specify the width of the YouTube video */
+  height: 180px; /* Specify the height of the YouTube video */
+  /* margin-bottom: 30px; */
 }
 
 .youtube-video-container,
 .gif-container {
   flex: 0 0 auto; /* Prevents the containers from growing or shrinking */
-  margin-right: 100px; /* Space between the video and the GIF */
+  margin-right: 10px; /* Space between the video and the GIF */
+  margin-bottom: 50px;
 }
 
 .youtube-link {
@@ -634,6 +670,13 @@ label {
 .gif-container {
   width: 320px; /* Specify the width of the GIF */
   height: 180px; /* Specify the height of the GIF */
+  object-fit: cover;
+}
+
+.image-container {
+  width: 320px; /* Specify the width of the GIF */
+  height: 180px; /* Specify the height of the GIF */
+  object-fit: cover;
 }
 
 .project-gif {
@@ -644,8 +687,21 @@ label {
 
 /* ppt stuff */
 .pdf-container {
+  margin-top: 30px;
   width: 320px; /* Specify the width */
   height: 180px; /* Specify the height */
+  margin-bottom: 50px;
+}
+
+.intern-pdf-container {
+  margin-top: 30px;
+  width: 320px; /* Specify the width */
+  height: 180px; /* Specify the height */
+  margin-bottom: 50px;
+  /* text-align: center; */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Horizontally center-align */
+  align-items: center; /* Vertically center-align */
 }
 
 .pdf-link {
@@ -741,7 +797,7 @@ label {
     width: 320px; /* Specify the width of the GIF */
     height: 180px; /* Specify the height of the GIF */
     margin-right: 0; /* Remove right margin */
-    margin-bottom: 10px; /* Space between media items */
+    margin-bottom: 50px; /* Space between media items */
   }
 
   .skills-list {
@@ -764,6 +820,7 @@ label {
 	padding: 5%;
 	text-align: center;	
 
+
 }
 
 body .projects .main-heading {
@@ -777,12 +834,13 @@ body .projects .main-heading {
 }
 
 body .projects .sub-heading {
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   font-family: 'DM-Serif';
-  font-size: 0.7em;
+  font-size: 0.99em;
   color: #ffffff;
   padding-bottom: 10px; /* Adjust this value as needed */
   text-align: left;
+  margin-top: -20px;
   /* float: left; Add this line to align the text to the left */
   /* clear: both; Add this line to clear any floating elements */
 }
@@ -811,7 +869,7 @@ body .projects .sub-heading {
 
 .project-title {
   font-family: 'DM-Serif';
-  font-size: 1.5em;
+  font-size: 2.0em;
   color: #ffffff;
   cursor: pointer; /* Indicates the title is interactive */
   text-align: left;
@@ -819,14 +877,16 @@ body .projects .sub-heading {
 
 .project-sub-title {
   font-family: 'DM-Serif';
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: #e6be9e;
   cursor: pointer; /* Indicates the title is interactive */
   text-align: left;
 }
 
 .project-description {
+  margin-top: 30px;
   font-family: 'Raleyway';
+  font-size: 1.3em;
   background: #000000;
   overflow: hidden;
   color: #ffffff;
@@ -836,14 +896,40 @@ body .projects .sub-heading {
   text-align: left;  
 }
 
-
-.project-image:hover + .project-info .project-description {
-  max-height: 500px; /* Adjust as needed */
+.github-link {
+  margin-top: 20px; /* Add spacing if needed */
+  font-size: 30px;
 }
 
-.project-image_1:hover + .project-info .project-description {
-  max-height: 500px; /* Adjust as needed */
+.github-text{
+  font-family: 'Raleyway';
+  font-size: 1.em;
+  background: #000000;
+  overflow: hidden;
+  color: #ffffff;
+  line-height: 20px;
+  transition: max-height .5s ease-in-out;
+  max-height: 0; 
+  text-align: left;  
 }
+
+.github-link a {
+  text-decoration: none; /* Remove underline from the link */
+  color: #ffffff; /* GitHub's link color */
+  display: flex;
+  align-items: center; /* Align the icon and text vertically */
+}
+
+.github-link i {
+  margin-right: 5px; /* Add spacing between icon and text */
+
+}
+
+.github-link span{
+  font-size: 20.0px;
+}
+
+
 
 /* Responsive adjustments if necessary */
 @media (max-width: 768px) {
@@ -857,6 +943,7 @@ body .projects .sub-heading {
   }
 
   .project-description {
+    margin-top: 30px;
       position: static;
   }
 }
@@ -1234,13 +1321,20 @@ font-size: 2em;
     background-color: #db0f31;
 }
 .navbar-inverse .navbar-nav>li:hover {
-    background-color: #9d9d9d;
+    background-color: #000000;
     color: white;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-family: 'DM-Serif';
+    font-size: 1em;
 }
 .navbar-inverse {
     background-color: #000000;
     border: none;
+    position: fixed;
+    height: 40px; /* Set the desired height */
+    width: 100%; /* Width to 100% to stretch the navbar */
+    font-family: 'DM-Serif';
+    font-size: 1em;
 }
 
 .home-button {
